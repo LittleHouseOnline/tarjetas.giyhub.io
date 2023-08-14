@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ body{
+    display: grid;
+    background-image: url("./img/fondo\ azul.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+ }
+.tarjeta{
+    background-color: aqua;
+    margin: 60px 10px;
+    width: 300px;
+    height: 210px;
+    border-radius: 10px;
+    position: relative;
+    transition: height 0.5s;
+}
+
+.nombre_tarjeta{
+    background-color: blue;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: -20px;
+    border-radius: 10px 10px 0px 0px;
+    transition: top 0.5s;
+}
+
+.nombre_tarjeta h4{
+    display: none;
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+.img_tarjeta{
+    width: 100%;
+    height: 210px;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 100;
+    transition: top 0.5s;
+}
+
+.img_tarjeta img{
+    height: 100%;
+}
+
+.descripcion_tarjeta{
+    top: 85px;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    font-size: 0.9rem;
+    transition: top 0.5s;
+    border-radius: 0px 0px 10px 10px;
+    z-index: -2;
+}
+
+
+
+
+.tarjeta:hover{
+    z-index: 1000;
+}
+
+
+.tarjeta:hover .descripcion_tarjeta{
+    top: 210px;
+}
+
+
+.tarjeta:hover .nombre_tarjeta{
+    top: -40px;
+}
+
+.tarjeta:hover .nombre_tarjeta h4{
+    display: flex;
+}
